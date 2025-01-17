@@ -2,6 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./FormStyles.module.css";
 
+/**
+ * AddEmployee component allows the user to add a new employee by filling out a form.
+ * The form includes fields for first name, last name, and email.
+ * On form submission, the employee data is sent to the server via a POST request.
+ * After successful submission, the user is navigated back to the home page.
+ *
+ * @component
+ * @example
+ * return (
+ *   <AddEmployee />
+ * )
+ */
 const AddEmployee = () => {
     const [employee, setEmployee] = useState({ firstName: "", lastName: "", email: "" });
     const navigate = useNavigate();
