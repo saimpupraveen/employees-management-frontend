@@ -1,0 +1,54 @@
+/* Header Section Styling */
+.home-header {
+    padding: 50px 0;
+    color: #333; /* Set a dark color for better visibility */
+}
+
+.home-header h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #000; /* Ensure the header title is clearly visible */
+}
+
+.home-header p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    color: #555; /* Slightly lighter color for the paragraph */
+}
+
+/* Feature Cards Styling */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* Set a dark color for card text */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #000; /* Ensure card titles are clearly visible */
+}
+
+.card .btn {
+    margin-top: 10px;
+    color: #fff; /* Ensure button text is visible */
+}
+
+.card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.card .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.card .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}

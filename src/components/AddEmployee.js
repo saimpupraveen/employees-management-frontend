@@ -25,7 +25,7 @@ const AddEmployee = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(employee),
         });
-        navigate("/");
+        navigate("/employee-list");
     };
 
     return (

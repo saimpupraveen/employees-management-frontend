@@ -9,21 +9,21 @@ const UpdateEmployee = () => {
     const { id } = useParams(); // Retrieve employee ID from the URL
 
     useEffect(() => {
-        fetchEmployeeById();
-    }, []);
-
-    const fetchEmployeeById = async () => {
-        try {
-            const response = await fetch(`http://localhost:8080/api/employees/${id}`);
-            if (!response.ok) {
-                throw new Error("Employee not found");
+        const fetchEmployeeById = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/api/employees/${id}`);
+                if (!response.ok) {
+                    throw new Error("Employee not found");
+                }
+                const data = await response.json();
+                setEmployee(data);
+            } catch (error) {
+                setError(error.message);
             }
-            const data = await response.json();
-            setEmployee(data);
-        } catch (error) {
-            setError(error.message);
-        }
-    };
+        };
+
+        fetchEmployeeById();
+    }, [id]); // Add 'id' as a dependency
 
     const handleUpdate = async (e) => {
         e.preventDefault();
@@ -38,7 +38,7 @@ const UpdateEmployee = () => {
                 throw new Error("Failed to update employee");
             }
 
-            navigate("/");
+            navigate("/employee-list");
         } catch (error) {
             setError(error.message);
         }
